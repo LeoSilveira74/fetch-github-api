@@ -1,4 +1,4 @@
-import { baseUrl } from "/src/js/services/variables.js"
+import { baseUrl } from "../variables.js"
 
 
 async function getUser(userName) {
