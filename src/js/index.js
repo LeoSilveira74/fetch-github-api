@@ -1,8 +1,8 @@
-import { getUser } from "./services/user.js"
-import { getRepositories } from "./services/repositories.js"
+import { getUser } from "../js/services/user.js"
+import { getRepositories } from "../js/services/repositories.js"
 
-import { user } from "./objects/user.js"
-import { screen } from "./objects/screen.js"
+import { user } from "../js/objects/user.js"
+import { screen } from "../js/objects/screen.js"
 
 document.getElementById("btn-search").addEventListener('click', () => {
     const userName = document.getElementById("input-search").value
@@ -50,4 +50,3 @@ async function getUserData(userName) {
    
    screen.renderUser(user)
 }
-

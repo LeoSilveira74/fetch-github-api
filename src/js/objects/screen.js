@@ -8,8 +8,21 @@ const screen = {
                 <h1>${user.name ?? 'Não possui nome cadastrado 😢'}</h1>
                 <p>${user.bio ?? 'Não possui bio cadastrado 😢'}</p>
             </div>
+            <div class="profile-data data">
+                <div class="followers-info data">
+                    <div>
+                        <p class="emoji">👥 Followers: </p>
+                        <br>
+                        <p class="followers">${user.followersUrl}</p>
+                    </div>
+                    <div>
+                        <p class="emoji">👥 Following: </p>
+                        <br>
+                        <p class="following">${user.followingUrl}</p>
+                    </div>
+                </div>
+            </div>
         </div>`
-
         let repositoriesItens = ''
         user.repositories.forEach(repo => repositoriesItens += `
             <li>
@@ -23,10 +36,11 @@ const screen = {
                                                 <ul>${repositoriesItens}</ul>
                                             </div>`
         }
+    
     },
     renderNotFound(){
         this.userProfile.innerHTML = "<h3>Usuário não encontrado</h3>"
-    }
+    } 
     
 }
 
